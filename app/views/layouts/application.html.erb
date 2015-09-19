@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Moodfor</title>
+  <title>moodfor</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<header>
+	<h1 class="mood-title">
+		<%= link_to 'moodfor', moods_path %>
+	</h1>
+</header>
+
+<div class="sidebar">
+	<ul>
+		<li class="side-links"><%= link_to 'i\'m in the mood for...', '/search' %></li>
+		<li class="side-links"><%= link_to 'but he ruins movies!', movies_path %></li>
+		<li class="side-links"><%= link_to 'you don\'t understand my feelings!', new_mood_path %></li>
+	</ul>
+</div>
+
+<div class="yield">
+	<%= yield %>
+</div> 
+
+<footer>
+		<ul>
+		<li class="swiss-logo"><%= image_tag('/swiss-icon.png',size: '20x20', alt: '&copy jswiss 2015') %></li>
+		<li class="links"><%= link_to 'about', '/about' %></li>
+		<li class="links"><%= link_to 'contact', '/contact' %></li>
+	</ul>
+</footer>
 
 </body>
 </html>
