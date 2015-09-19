@@ -1,43 +1,50 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>moodfor</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<header>
-	<h1 class="mood-title">
-		<%= link_to 'moodfor', moods_path %>
-	</h1>
-</header>
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
 
-<div class="sidebar">
-	<ul>
-		<li class="side-links"><%= link_to 'i\'m in the mood for...', '/search' %></li>
-		<li class="side-links"><%= link_to 'but he ruins movies!', movies_path %></li>
-		<li class="side-links"><%= link_to 'you don\'t understand my feelings!', new_mood_path %></li>
-	</ul>
-</div>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+	<body>
+		<header>
+			<h1 class="mood-title">
+				<%= link_to 'moodfor', moods_path %>
+			</h1>
+		</header>
 
-<div class="yield">
-	<%= yield %>
-</div> 
+		<div class="sidebar">
+			<ul>
+				<li class="side-links"><%= link_to 'i\'m in the mood for...', '/search' %></li>
+				<li class="side-links"><%= link_to 'but he ruins movies!', movies_path %></li>
+				<li class="side-links"><%= link_to 'you don\'t understand my feelings!', new_mood_path %></li>
+			</ul>
+		</div>
 
-<footer>
-		<ul>
-		<li class="swiss-logo"><%= image_tag('swiss-icon.png',size: '45x45', alt: '&copy jswiss 2015') %>
-				<p class='copy-text'>
-					<span class="copyright">&copy</span>
-					jswiss 2015
-				</p>
-			</li>
-		<li class="links"><%= link_to 'about', '/about' %></li>
-		<li class="links"><%= link_to 'contact', '/contact' %></li>
-	</ul>
-</footer>
+		<div class="yield">
+			<%= yield %>
+		</div> 
 
-</body>
+		<footer>
+				<ul>
+				<li class="swiss-logo"><%= image_tag('swiss-icon.png',size: '45x45', alt: '&copy jswiss 2015') %>
+						<p class='copy-text'>
+							<span class="copyright">&copy</span>
+							jswiss 2015
+						</p>
+					</li>
+				<li class="links"><%= link_to 'about', '/about' %></li>
+				<li class="links"><%= link_to 'contact', '/contact' %></li>
+			</ul>
+		</footer>
+	</body>
 </html>
+
+
+
+
