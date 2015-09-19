@@ -31,12 +31,12 @@ m39	=	Mood.create!(name:	'Silly', db_genre_id:	'35', db_opp_genre_id:	'18', imag
 m40	=	Mood.create!(name:	'Smart', db_genre_id:	'99,10769', db_opp_genre_id:	'10749,35,10751', image: 'smart.png')
 m41	=	Mood.create!(name:	'Stressed', db_genre_id:	'10770,9648', db_opp_genre_id:	'16,35', image: 'stressed.png')
 
-mov1 = Movie.create!(name: 'Christine', image: '', mood_id: m12.id, director: 'john', actors: 'billy, clarence', plot: 'killer clown', genre: 'Horror')
-mov2 = Movie.create!(name: 'Drive', image: '', mood_id: m17.id, director: 'sarah', actors: 'Ryan Duckling', plot: 'a chauffeur drives around LA', genre: 'Thriller')
+mov1 = Movie.create!(name: 'Christine', image: '', mood_id: m2.id, director: 'john', actors: 'billy, clarence', plot: 'killer clown', genre: 'Horror')
+mov2 = Movie.create!(name: 'Drive', image: '', mood_id: m27.id, director: 'sarah', actors: 'Ryan Duckling', plot: 'a chauffeur drives around LA', genre: 'Thriller')
 mov3 = Movie.create!(name: 'Step Brothers', image: '', mood_id: m4.id, director: 'Cramperton', actors: 'Bill Terrell', plot: 'brothers are silly', genre: 'Comedy')
-mov4 = Movie.create!(name: 'Bowling for Columnbine', image: '', mood_id: m6.id, director: 'Fatty Fatterson', actors: '', plot: 'the world\'s best bowlers', genre: 'Documentary')
+mov4 = Movie.create!(name: 'Bowling for Columnbine', image: '', mood_id: m40.id, director: 'Fatty Fatterson', actors: '', plot: 'the world\'s best bowlers', genre: 'Documentary')
 mov5 = Movie.create!(name: 'The Maltese Falcon', image: '', mood_id: m14.id, director: 'some odl dude', actors: 'Humpty Bogardt', plot: 'a bird from malta gets up to some hijinks!', genre: 'Mystery')
-mov6 = Movie.create!(name: 'Lord of the Things', image: '', mood_id: m9.id, director: 'Peateaer Craksonn', actors: 'Short dudes', plot: 'A guy llikes things so becomes lord of them', genre: 'Fantasy')
+mov6 = Movie.create!(name: 'Lord of the Things', image: '', mood_id: m22.id, director: 'Peateaer Craksonn', actors: 'Short dudes', plot: 'A guy llikes things so becomes lord of them', genre: 'Fantasy')
 
 c1 = Comment.create(comment: 'He drives so good', movie_id: mov2.id)
 c2 = Comment.create(comment: 'old timey film', movie_id: mov5.id)
