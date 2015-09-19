@@ -4,4 +4,8 @@ class MoodsController < ApplicationController
 		@moods = Mood.all
 	end
 
+	def show
+		@mood = Mood.find(params[:id])
+	end
+
 end

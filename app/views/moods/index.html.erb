@@ -1,0 +1,3 @@
+<% @moods.sort_by(&:name).each do |mood| %>
+	<h2><%= link_to(mood.name, mood) %></h2>
+<% end %>

@@ -15,7 +15,7 @@ m6 = Mood.create!(name: 'Thoughtful', opposite: 'Fighty', db_genre_id: 99, genre
 m7 = Mood.create!(name: 'Depressed', opposite: 'Energetic', db_genre_id: 18, genre: 'Drama')
 m8 = Mood.create!(name: 'Loved', opposite: 'Depressed', db_genre_id: 10751, genre: 'Family')
 m9 = Mood.create!(name: 'Curious', opposite: 'Old-fashioned', db_genre_id: 14, genre: 'Fantasy')
-m10 = Mood.create!(name: 'Intellectual', opposite: 'Virile', db_genre_id: 10769, genre: 'Foreign')
+m10 = Mood.create!(name: 'Intellectual', opposite: 'Macho', db_genre_id: 10769, genre: 'Foreign')
 m11 = Mood.create!(name: 'Old-fashioned', opposite: 'artistic', db_genre_id: 36, genre: 'History')
 m12 = Mood.create!(name: 'Creepy', opposite: 'Loved', db_genre_id: 27, genre: 'Horror')
 m13 = Mood.create!(name: 'Histrionic', opposite: 'Fighty', db_genre_id: 10402, genre: 'Music')
@@ -24,7 +24,7 @@ m15 = Mood.create!(name: 'Romantic', opposite: 'Intellectual', db_genre_id: 1074
 m16 = Mood.create!(name: 'Creative', opposite: 'Curious', db_genre_id: 878, genre: 'Science Fiction')
 m17 = Mood.create!(name: 'Tense', opposite: 'Creative', db_genre_id: 10770, genre: 'Thriller')
 m18 = Mood.create!(name: 'Fighty', opposite: 'Happy', db_genre_id: 10752, genre: 'War')
-m19 = Mood.create!(name: 'Virile', opposite: 'Inquisitive', db_genre_id: 37, genre: 'Western')
+m19 = Mood.create!(name: 'Macho', opposite: 'Inquisitive', db_genre_id: 37, genre: 'Western')
 
 mov1 = Movie.create!(name: 'Christine', image: '', mood_id: m12.id, director: 'john', actors: 'billy, clarence', plot: 'killer clown', genre: 'Horror')
 mov2 = Movie.create!(name: 'Drive', image: '', mood_id: m17.id, director: 'sarah', actors: 'Ryan Duckling', plot: 'a chauffeur drives around LA', genre: 'Thriller')
