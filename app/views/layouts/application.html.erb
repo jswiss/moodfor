@@ -6,18 +6,18 @@
    	<!-- Compiled and minified CSS -->
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
-	  <link rel="stylesheet" href="style.css">
+	  <link rel="stylesheet" href="style.css.scss">
 
   </head>
 	<body>
-		<nav class="top-bar">
-			<h1 class="mood-title">
-				<%= link_to 'moodfor', moods_path %>
-			</h1>
-			<ul class="right">
-				<li class="side-links"><%= link_to 'mood', '/search' %></li>
-				<li class="side-links"><%= link_to 'dude', movies_path %></li>
-			</ul>
+		<nav>
+			<div class="nav-wrapper">
+				<div class="brand-logo"><%= link_to 'moodfor', moods_path %></div>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+	        <li><%= link_to 'mood', '/search' %></li>
+	        <li><%= link_to 'dude', movies_path %></li>
+	      </ul>
+			</div>
 		</nav>
 
 		<div class="container">
