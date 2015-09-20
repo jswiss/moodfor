@@ -6,6 +6,7 @@
    	<!-- Compiled and minified CSS -->
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+	  <link rel="stylesheet" href="style.css">
 
   </head>
 	<body>
@@ -13,15 +14,11 @@
 			<h1 class="mood-title">
 				<%= link_to 'moodfor', moods_path %>
 			</h1>
-		</nav>
-
-		<div class="sidebar">
-			<ul>
-				<li class="side-links"><%= link_to 'i\'m in the mood for...', '/search' %></li>
-				<li class="side-links"><%= link_to 'but he ruins movies!', movies_path %></li>
-				<li class="side-links"><%= link_to 'you don\'t understand my feelings!', new_mood_path %></li>
+			<ul class="right">
+				<li class="side-links"><%= link_to 'mood', '/search' %></li>
+				<li class="side-links"><%= link_to 'dude', movies_path %></li>
 			</ul>
-		</div>
+		</nav>
 
 		<div class="container">
 			<%= yield %>
