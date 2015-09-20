@@ -5,12 +5,14 @@
 	border-radius: 5px;
 }
 
-.mood-image {
-    position: relative;
+div#image-container {
+    position: absolute;
     float: left;
-    width:  200px;
-    height: 200px;
-    background-position: 50% 50%;
-    background-repeat:   no-repeat;
-    background-size:     cover;
+    max-width:  200px;
+    max-height: 200px;
+}
+
+.img {
+  width:  200px;
+  height: 200px;
 }

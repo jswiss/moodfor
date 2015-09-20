@@ -3,7 +3,7 @@
 		<div class="col s4">
 			<div class="card blue-grey darken-2">
 				<div class="card-content white-text">
-					<%= image_tag(mood.image, :class => "mood-image") %>
+					<div id="image-container"><%= image_tag(mood.image) %></div>
 					<h4 class="mood-name"><%= link_to mood.name, mood, data: {genre_id: mood.db_genre_id} %></h4>
 				</div>
 			</div>

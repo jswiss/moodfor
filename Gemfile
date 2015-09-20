@@ -15,6 +15,9 @@ gem 'sass-rails', '~> 5.0'
 #materialize css
 gem 'materialize-sass'
 
+#rmagick
+gem 'rmagick', '~> 2.15.4'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
