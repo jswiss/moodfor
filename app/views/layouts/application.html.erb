@@ -2,21 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
-
-    <%= stylesheet_link_tag    "..app/assets/stylesheets/application.css" %>
-    <%= javascript_include_tag "vendor/modernizr" %>
-    <%= javascript_include_tag "..app/assets/javascripts/application.js", 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tags %>
+   	<title>moodfor</title>
+   	<!-- Compiled and minified CSS -->
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">   
   </head>
 	<body>
-		<header>
+		<nav class="top-bar">
 			<h1 class="mood-title">
 				<%= link_to 'moodfor', moods_path %>
 			</h1>
-		</header>
+		</nav>
 
 		<div class="sidebar">
 			<ul>
@@ -26,7 +21,7 @@
 			</ul>
 		</div>
 
-		<div class="yield">
+		<div class="container">
 			<%= yield %>
 		</div> 
 
@@ -42,6 +37,8 @@
 				<li class="links"><%= link_to 'contact', '/contact' %></li>
 			</ul>
 		</footer>
+	  <!-- Compiled and minified JavaScript -->
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>  
 	</body>
 </html>
 

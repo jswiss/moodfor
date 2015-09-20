@@ -64,9 +64,6 @@ GEM
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.6.0)
-    foundation-rails (5.5.2.1)
-      railties (>= 3.1.0)
-      sass (>= 3.3.0, < 3.5)
     git-version-bump (0.15.1)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
@@ -83,6 +80,8 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    materialize-sass (0.97.1)
+      sass (~> 3.3)
     meta_request (0.3.4)
       callsite (~> 0.0, >= 0.0.11)
       rack-contrib (~> 1.1)
@@ -198,10 +197,10 @@ DEPENDENCIES
   byebug
   capybara
   coffee-rails (~> 4.1.0)
-  foundation-rails
   jbuilder (~> 2.0)
   jquery-rails
   json
+  materialize-sass
   meta_request
   pg
   pry-rails
