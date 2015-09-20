@@ -22,7 +22,7 @@ $(document).ready(function() {
 		var data = response.results
 		$.each(data, function(index, value) {
 			var movieCardTemplate = '<div class ="movie=card">';
-			movieCardTemplate += '<img src="'value.poster_path.url + '" alt="" class="card-poster">';
+			movieCardTemplate += '<img src="'value.poster_path + '" alt="">';
 			movieCardTemplate += '<h2 class="card-title">"'value.original_title'"</h2>';
 			movieCardTemplate += '<p class="card-overview">"'value.original_title'"</p>';
 			movieCardTemplate += '</div>'
