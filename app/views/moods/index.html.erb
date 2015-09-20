@@ -1,10 +1,14 @@
 <div class="row">
 	<% @moods.sort_by(&:name).each do |mood| %>
 		<div class="col s4">
-			<div class="card blue-grey darken-2">
-				<div class="card-content white-text">
-					<div id="image-container"><%= image_tag(mood.image) %></div>
-					<h4 class="mood-name"><%= link_to mood.name, mood, data: {genre_id: mood.db_genre_id} %></h4>
+			<div class="card small blue-grey darken-2">
+				<div class="card-image">
+					<%= image_tag(mood.image) %>
+				</div>
+					<div class="card-content white-text">
+					<span class="card-title">
+						<%= link_to mood.name, mood, data: {genre_id: mood.db_genre_id} %>
+					</span>
 				</div>
 			</div>
 		</div>
