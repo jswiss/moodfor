@@ -3,7 +3,7 @@
 		 <div class="col s4">	
 			<div class="mood-box">
 				<img src= @mood.image>
-				<h4 class="mood-name"><%= link_to mood.name, mood, data= mood.db_genre_id %></h4>
+				<h4 class="mood-name"><%= link_to mood.name, mood, data: {genre_id: mood.db_genre_id} %></h4>
 			</div>
 	  </div>
 		<% end %>

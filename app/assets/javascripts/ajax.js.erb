@@ -1,0 +1,33 @@
+console.log('hello world')
+
+$(document).ready(function() {
+
+	var mood = $('.mood-name');
+	var moodResults = $('#mood-results');
+
+	mood.on('click', search);
+
+	function search(e) {
+		console.log('search');
+		e.preventDefault();
+		var genreId = mood.data('genre_id');
+
+		$.get('https://api.themoviedb.org/3/discover/movie?api_key=8a40a9b70991be8016678a3ffc4d6aa2&with_genres=' + genreId, function(response) {
+			render(response);
+		});
+	}
+
+	function render(response) {
+		console.log(response);
+		var data = response.results
+		$.each(data, function(index, value) {
+			var movieCardTemplate = '<div class ="movie=card">';
+			movieCardTemplate += '<img src="'value.poster_path.url + '" alt="" class="card-poster">';
+			movieCardTemplate += '<h2 class="card-title">"'value.original_title'"</h2>';
+			movieCardTemplate += '<p class="card-overview">"'value.original_title'"</p>';
+			movieCardTemplate += '</div>'
+		})
+		results.hide().append(trackCardTemplate).fadeIn('slow');
+
+	}
+});
