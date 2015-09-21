@@ -1,7 +1,7 @@
 <div class="row">
 	<% @moods.sort_by(&:name).each do |mood| %>
 		<div class="mood-card col s4">
-			<div class="card small #ef9a9a red lighten-3">
+			<div class="card small #ef9a9a red lighten-3 hoverable">
 				<div class="card-image">
 					<%= image_tag(mood.image, size: '200x200', class: "mood-image") %>
 				</div>
