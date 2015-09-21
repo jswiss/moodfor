@@ -11,7 +11,6 @@ $(document).ready(function() {
 		console.log('search');
 		e.preventDefault();
 		var genreId = mood.data('genre_id');
-
 		$.get('https://api.themoviedb.org/3/discover/movie?api_key=8a40a9b70991be8016678a3ffc4d6aa2&with_genres=' + genreId, function(response) {
 			render(response);
 		});

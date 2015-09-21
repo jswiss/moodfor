@@ -14,8 +14,10 @@
 			<div class="nav-wrapper">
 				<div class="brand-logo"><%= link_to 'moodfor', moods_path %></div>
 				<ul id="nav-mobile" class="right hide-on-med-and-down">
-	        <li><%= link_to 'mood', '/search' %></li>
-	        <li><%= link_to 'dude', movies_path %></li>
+	        <li class="links"><%= link_to 'mood', '/search' %></li>
+	        <li class="links"><%= link_to 'dude', movies_path %></li>
+	        <li class="links"><%= link_to 'about', '/about' %></li>
+					<li class="links"><%= link_to 'contact', '/contact' %></li>
 	      </ul>
 			</div>
 		</nav>
@@ -24,29 +26,15 @@
 			<%= yield %>
 		</div> 
 
-		<footer>
-				<ul>
-				<li class="swiss-logo"><%= image_tag('swiss-icon.png',size: '45x45', alt: '&copy jswiss 2015') %>
-						<p class='copy-text'>
-							<span class="copyright">&copy</span>
-							jswiss 2015
-						</p>
-					</li>
-				<li class="links"><%= link_to 'about', '/about' %></li>
-				<li class="links"><%= link_to 'contact', '/contact' %></li>
-			</ul>
-		</footer>
-
-    <footer class="page-footer">
-      <div class="footer-copyright">
-        <div class="container">
-        	<%= image_tag('swiss-icon.png',size: '45x45', alt: '&copy jswiss 2015') %> &copy jswiss 2015
-	   		<ul>
-					<li class="links"><%= link_to 'about', '/about' %></li>
-					<li class="links"><%= link_to 'contact', '/contact' %></li>
-				</ul>
-        </div>
-      </div>
+    <footer>
+      <tr>
+      	<div class="logo">
+      		<%= image_tag('swiss-icon.png',size: '45x45', alt: '&copy jswiss 2015') %>
+      	</div>
+	      <div class="copyright">
+		      <p>&copy jswiss 2015</p>
+	      </div>
+      </tr>
     </footer>
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>  
 		<%= javascript_include_tag('ajax.js') %>  
