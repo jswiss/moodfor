@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   root 'moods#index'
 
   resources :moods
-  resources :movies
-  resources :comments
+  resources :movies do
+      resources :comments
+  end
 
   get '/about' => 'pages#about'
   get '/contact' => 'pages#contact'

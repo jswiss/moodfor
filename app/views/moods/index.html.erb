@@ -3,7 +3,7 @@
 		<div class="mood-card col s4">
 			<div class="card small #ef9a9a red lighten-3 hoverable">
 				<div class="card-image">
-					<%= image_tag(mood.image, size: '200x200', class: "mood-image") %>
+					<%= link_to image_tag(mood.image, size: '200x200', class: "mood-image"), mood, data: mood.db_genre_id, class: "mood-link" %>
 				</div>
 					<div class="card-content small white-text">
 					<span class="card-title">
