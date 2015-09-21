@@ -8,4 +8,8 @@ class MoodsController < ApplicationController
 		@mood = Mood.find(params[:id])
 	end
 
+	# def '/search'
+	# 	@moods = Mood.all
+	# end
+
 end

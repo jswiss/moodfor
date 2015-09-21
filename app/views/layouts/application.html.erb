@@ -5,9 +5,10 @@
    	<title>moodfor</title>
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
 	  <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,100italic,300,300italic' rel='stylesheet' type='text/css'>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>  
+		<%= javascript_include_tag('materialize.js') %> 
 		<%= stylesheet_link_tag('materialize.css') %>  
 		<%= stylesheet_link_tag('style.css') %>  
-
   </head>
 	<body>
 		<nav>
@@ -15,7 +16,7 @@
 				<div class="brand-logo"><%= link_to 'moodfor', moods_path %></div>
 				<ul id="nav-mobile" class="right hide-on-med-and-down">
 	        <li class="links"><%= link_to 'mood', '/search' %></li>
-	        <li class="links"><%= link_to 'dude', movies_path %></li>
+	        <li class="links"><%= link_to 'comments', comments_path %></li>
 	        <li class="links"><%= link_to 'about', '/about' %></li>
 					<li class="links"><%= link_to 'contact', '/contact' %></li>
 	      </ul>
@@ -35,10 +36,7 @@
 		      <p>&copy jswiss 2015</p>
 	      </div>
       </tr>
-    </footer>
-	  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>  
-		<%= javascript_include_tag('ajax.js') %>  
-		<%= javascript_include_tag('materialize.js') %>  
+    </footer> 
 	</body>
 </html>
 

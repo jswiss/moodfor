@@ -1,17 +1,19 @@
 <div class="row">
 	<% @moods.sort_by(&:name).each do |mood| %>
-		<div class="col s4">
+		<div class="mood-card col s4">
 			<div class="card small #ef9a9a red lighten-3">
 				<div class="card-image">
 					<%= image_tag(mood.image, size: '200x200') %>
 				</div>
 					<div class="card-content small white-text">
 					<span class="card-title">
-						<h4 class="mood-title"><%= link_to mood.name, mood, data: {genre_id: mood.db_genre_id} %></h4>
+						<h4 class="mood-title">test</h4>
 					</span>
 				</div>
 			</div>
 		</div>
 	<% end %>
 </div>
+
+<%= javascript_include_tag "mood" %>
 

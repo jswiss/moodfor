@@ -15,6 +15,9 @@ gem 'sass-rails', '~> 5.0'
 #materialize css
 gem 'materialize-sass'
 
+#gon
+gem 'gon'
+
 #rmagick
 gem 'rmagick', '~> 2.15.4'
 

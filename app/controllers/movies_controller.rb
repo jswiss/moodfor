@@ -12,4 +12,8 @@ class MoviesController < ApplicationController
 		@movie = Movie.new
 	end
 
+	def edit
+		@movie = Movie.find(params[:id])
+	end
+
 end
