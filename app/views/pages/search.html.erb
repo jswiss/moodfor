@@ -1,0 +1,9 @@
+<%= form_for @mood do |f| %>
+	<%= f.label 'I\'m feeling:' %>
+	<%= f.collection_select :mood_id, Mood.all, :id, :name %>
+	
+	<%= f.label 'and I want to:' %>
+	<%= f.select options_for_select[[mood.db_opp_id, 'keep feeling it'], [mood.db_genre_id, 'change my mood up']] %>
+	
+	<%= f.submit "Show me some movies!" %>
+<% end %>

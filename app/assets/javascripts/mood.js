@@ -1,4 +1,4 @@
-console.log('hello world')
+console.log('I AM MOODY')
 
 $(document).ready(function() {
 
