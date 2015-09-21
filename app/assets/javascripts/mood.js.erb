@@ -12,7 +12,7 @@ function render(response) {
 	console.log(response);
 	var data = response
 	$.each(data.results, function(index, value) {
-		var movieCardTemplate = '<div class="card movie-card"><div class="card-image waves-effect waves-block waves-light">';
+		var movieCardTemplate = '<div class="card movie-card col s6"><div class="card-image waves-effect waves-block waves-light">';
 		movieCardTemplate += '<img class="activator" src=https://image.tmdb.org/t/p/w185/' + value.poster_path + '" alt="">';
 		movieCardTemplate += '</div>'
 		movieCardTemplate += '<div class="card-content">'
