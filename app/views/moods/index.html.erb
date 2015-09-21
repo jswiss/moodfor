@@ -3,7 +3,7 @@
 		<div class="mood-card col s4">
 			<div class="card small #ef9a9a red lighten-3">
 				<div class="card-image">
-					<%= image_tag(mood.image, size: '200x200') %>
+					<%= image_tag(mood.image, size: '200x200', class: "mood-image") %>
 				</div>
 					<div class="card-content small white-text">
 					<span class="card-title">
@@ -14,6 +14,3 @@
 		</div>
 	<% end %>
 </div>
-
-<%= javascript_include_tag "mood" %>
-

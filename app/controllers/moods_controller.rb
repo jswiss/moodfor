@@ -6,6 +6,7 @@ class MoodsController < ApplicationController
 
 	def show
 		@mood = Mood.find(params[:id])
+		# gon.mood = Mood.find(params[:id])
 	end
 
 	# def '/search'
