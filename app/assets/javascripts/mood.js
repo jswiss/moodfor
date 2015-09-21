@@ -12,10 +12,15 @@ function render(response) {
 	console.log(response);
 	var data = response
 	$.each(data.results, function(index, value) {
-		var movieCardTemplate = '<div class ="movie-card">';
-		movieCardTemplate += '<img src=https://image.tmdb.org/t/p/w185/' + value.poster_path + '" alt="">';
-		movieCardTemplate += '<h2 class="card-title">' + value.original_title + '</h2>';
-		movieCardTemplate += '<p class="card-overview">' + value.original_title + '</p>';
+		var movieCardTemplate = '<div class="card movie-card"><div class="card-image waves-effect waves-block waves-light">';
+		movieCardTemplate += '<img class="activator" src=https://image.tmdb.org/t/p/w185/' + value.poster_path + '" alt="">';
+		movieCardTemplate += '</div>'
+		movieCardTemplate += '<div class="card-content">'
+		movieCardTemplate += '<span class="card-title activator grey-text text-darken-4">'+ value.original_title +'<i class="material-icons right">more...</i></span>'
+		movieCardTemplate += '</div>'
+		movieCardTemplate += '<div class="card-reveal">'
+		movieCardTemplate += '<span class="card-title grey-text text-darken-4">'+ value.original_title +'<i class="material-icons right">close</i></span>'
+    movieCardTemplate += '<p>'+ value.overview +'</p>'
 		movieCardTemplate += '</div>'
 		
 		moodResults.hide().append(movieCardTemplate).fadeIn('slow');
