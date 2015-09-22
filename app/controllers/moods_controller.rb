@@ -9,6 +9,7 @@ class MoodsController < ApplicationController
 	end
 
 	def new
-		@mood = Mood.new
+		@mood = Mood.new(params[:mood])
+		@genres = Genre.all
 	end
 end
