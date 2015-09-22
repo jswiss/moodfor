@@ -5,9 +5,14 @@
 	<%= f.label 'add an image:' %>
 	<%= f.text_field :image %>
 	<br>
-	<%= f.collection_check_boxes :genre_ids, Genre.all, :id, :genre do |b| %>
-			<% b.check_box + b.label { b.text } %> 
-	<% end %>	
+	<div class="col-md-4 checkbox-list">
+		<%= f.collection_check_boxes :genre_ids, Genre.all, :id, :genre do |b| %>
+				<% b.label(class:"checks") do %> 
+				<% b.check_box + b.label { b.text } %> 
+		<% end %>	
+		<% end %>	
+	</div>
+	<br>
 	<br>
 	<%= f.submit "Show me some movies!" %>
 
