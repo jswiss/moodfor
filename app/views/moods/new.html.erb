@@ -7,7 +7,7 @@
 	
 	<%=fields_for @genre do |fa| %>
 		<%= fa.label 'when I feel this way I\'m in the mood for:' %>
-		<%= fa.collection_select(:genre_id, 0, Genre.all, :id, :name)  %>
+		<%= fa.select(:genre_id, 0, Genre.all, :id, :name)  %>
 	<% end %>	
 
 	<%= f.submit "Show me some movies!" %>

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :movies do
       resources :comments
   end
+  resources :genres
 
   get '/about' => 'pages#about'
   get '/contact' => 'pages#contact'
