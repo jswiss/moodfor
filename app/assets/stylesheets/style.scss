@@ -33,3 +33,29 @@ a {
 	max-height: 450px;
 	margin: 5px;
 }
+
+.edit-delete {
+	color: black;
+}
+
+.checks {
+	margin: 3px;
+}
+
+.checks {
+  display: inline-block;
+  vertical-align: -1px;
+  margin: 5px;
+ }
+.checks input {
+  display: inline;
+ }
+.checks .collection_check_boxes{
+  display: inline;
+  vertical-align: -5px;
+  margin-right: -5px;
+ }
+
+#new_mood {
+	margin: 10px 0 0 0;
+}

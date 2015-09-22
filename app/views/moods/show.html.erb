@@ -1,4 +1,12 @@
 <div class="row">
-	<div id="mood-results" data-mood-genre-ids="<%= @mood.db_genre_ids %>"><%= link_to 'more info', 	movie_path %></div>
+	<div class="mood-title">
+		<br>
+		<h2>Movies for your <%= @mood.name %> mood</h2>
+		<p><%= link_to 'Edit', edit_mood_path, class: "edit-delete" %></p>
+		<p><%= link_to 'Delete', '/moods', class:"edit-delete" %></p>  	  
+	</div>
+		<div id="mood-results" data-mood-genre-ids="<%= @mood.db_genre_ids %>"><%= link_to 'more info', 	movie_path %></div>
 </div>
 <%= javascript_include_tag "mood" %>
+
+

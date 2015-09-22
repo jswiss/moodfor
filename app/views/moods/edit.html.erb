@@ -1,0 +1,22 @@
+<%= form_for (@mood) do |f| %>
+	<%= f.label 'I\'m feeling:' %>
+	<%= f.text_field :name %>
+	<br>
+	<%= f.label 'add an image from the web:' %>
+	<%= f.text_field :image %>
+	<br>
+	<%= f.label 'When I\'m feeling this way I like to watch:' %>
+	<br>
+	<br>
+	<div class="col-md-4 checkbox-list">
+		<%= f.collection_check_boxes :db_genre_ids, Genre.all, :db_genre_id, :genre do |b| %>
+				<% b.label(class:"checks") do %> 
+				<% b.check_box + b.label { b.text } %> 
+		<% end %>	
+		<% end %>	
+	</div>
+	<br>
+	<br>
+	<%= f.submit "Show me some movies!" %>
+
+<% end %>
