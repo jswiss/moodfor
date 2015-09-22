@@ -1,15 +1,14 @@
-<%= form_for @mood do |f| %>
+<%= form_for (@mood) do |f| %>
 	<%= f.label 'I\'m feeling:' %>
 	<%= f.text_field :name %>
-	
+	<br>
 	<%= f.label 'add an image:' %>
 	<%= f.text_field :image %>
-	
-	<%=fields_for @genre do |fa| %>
-		<%= fa.label 'when I feel this way I\'m in the mood for:' %>
-		<%= fa.select(:genre_id, 0, Genre.all, :id, :name)  %>
+	<br>
+	<%= f.collection_check_boxes :genre_ids, Genre.all, :id, :genre do |b| %>
+			<% b.check_box + b.label { b.text } %> 
 	<% end %>	
-
+	<br>
 	<%= f.submit "Show me some movies!" %>
 
 <% end %>

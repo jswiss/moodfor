@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150922082936) do
+ActiveRecord::Schema.define(version: 20150922105520) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,12 +26,12 @@ ActiveRecord::Schema.define(version: 20150922082936) do
   add_index "comments", ["movie_id"], name: "index_comments_on_movie_id", using: :btree
 
   create_table "genres", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "genre_id"
+    t.string   "genre"
+    t.integer  "db_genre_id"
     t.integer  "mood_id"
     t.integer  "movie_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "moods", force: :cascade do |t|
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 20150922082936) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.string   "db_opp_genre_id"
-    t.string   "db_genre_id"
+    t.string   "db_genre_ids"
     t.string   "image"
   end
 
