@@ -10,3 +10,5 @@ moodfor was built using Ruby on Rails. Javascript and Jquery were employed to ca
 	-pry rails
 
 moodfor is in alpha at the moment. More functionalities are on their way.
+
+![moodfor screenshot] (app/assets/images/screenshot.png)
